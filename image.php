@@ -109,9 +109,7 @@ else {
 if(isset($_POST['Показать'])){
 //Считаем сколько раз выводим картинку наэкран
 $image = $_POST['image'];
-echo "<br>";
 $image = (int)(str_replace('Картинка ', '', $image)-1);
-echo $image;
 $stmt = $pdo->prepare("SELECT * FROM `quantity`");
 $stmt->execute();
 $namber = $stmt->fetchAll();
